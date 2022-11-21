@@ -50,6 +50,11 @@ a:hover {
   color: var(--linksHover);
 }
 
+hr {
+  width: 95%;
+  margin: 1rem auto;
+}
+
 .retocontenedor {
   width: 95%;
   margin: 1rem auto;
@@ -86,6 +91,24 @@ button {
 button:hover {
   background-color: var(--botonHover);
   color: var(--boton);
+}
+
+/* Reto #1 */
+.retocontenedor .palabras {
+  margin: 1rem 0;
+}
+
+.retocontenedor .palabras label {
+  display: block;
+  margin: 1rem auto 0.25rem;
+}
+
+.retocontenedor .palabras input {
+  display: block;
+  outline: none;
+  border: none;
+  width: 15rem;
+  padding: 0.25rem 0.5rem;
 }
 
 

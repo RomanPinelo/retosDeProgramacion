@@ -37,8 +37,12 @@ function isAnagrama(primerPalabra, segundaPalabra) {
 mostrarButton[1].addEventListener("click", () => {
   retoContenedor[1].innerHTML = "";
 
-  let primerPalabra = document.getElementById("palabra1").value.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-  let segundaPalabra = document.getElementById("palabra2").value.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  console.log(document.getElementById("palabra1").value, document.getElementById("palabra2").value);
+
+  let primerPalabra = document.getElementById("palabra1").value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
+  let segundaPalabra = document.getElementById("palabra2").value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
+
+  console.log(primerPalabra, segundaPalabra);
 
   if (primerPalabra.length == 0 && segundaPalabra.length == 0) {
     retoContenedor[1].innerHTML = "Ingresa las palabras";

@@ -1,3 +1,14 @@
+:root {
+  --fondo: #18171c;
+  --titulo: #1fa0d9;
+  --subtitulo: #2a9be1;
+  --links: #1b698d;
+  --linksHover: #2591c4;
+  --boton: #0085c8;
+  --botonHover: #014c72;
+  --texto: #fff;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,6 +16,82 @@
 }
 
 body {
-  background-color: #000;
-  color: #fff;
+  background-color: var(--fondo);
+  color: var(--texto);
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: justify;
+}
+
+
+/************************************************************* 
+  MOBILE SCREEN
+*************************************************************/
+h1 {
+  text-align: center;
+  margin: 1rem auto 2rem;
+  color: var(--titulo);
+}
+
+h2 {
+  color: var(--subtitulo);
+}
+
+p {
+  width: 95%;
+  margin: 1rem auto;
+}
+
+a {
+  text-decoration: none;
+  color: var(--links);
+}
+
+a:hover {
+  color: var(--linksHover);
+}
+
+.retocontenedor {
+  width: 95%;
+  margin: 1rem auto;
+}
+
+.retocontenedor p {
+  margin: 1rem 0;
+}
+
+.retocontenedor ul {
+  margin-left: 1rem;
+}
+
+.botones {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem auto;
+}
+
+button {
+  display: inline-block;
+  padding: 0.25rem 1rem;
+  outline: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  background-color: var(--boton);
+  cursor: pointer;
+  color: var(--texto);
+  border: 2px solid var(--boton);
+  transition: 0.25s;
+}
+
+button:hover {
+  background-color: var(--botonHover);
+  color: var(--boton);
+}
+
+
+/************************************************************* 
+  DESKTOP SCREEN
+*************************************************************/
+@media screen and (min-width: 1000px) {
+
 }

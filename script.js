@@ -31,7 +31,6 @@ function isAnagrama(primerPalabra, segundaPalabra) {
   let primerPalabraArray = primerPalabra.toLowerCase().split("").sort().join("");
   let segundaPalabraArray = segundaPalabra.toLowerCase().split("").sort().join("");
 
-  console.log(primerPalabraArray, segundaPalabraArray);
   primerPalabraArray === segundaPalabraArray ? retoContenedor[1].innerHTML = "Es un anagrama" : retoContenedor[1].innerHTML = "No es un anagrama";
 }
 
@@ -41,7 +40,9 @@ mostrarButton[1].addEventListener("click", () => {
   let primerPalabra = document.getElementById("palabra1").value.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
   let segundaPalabra = document.getElementById("palabra2").value.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
-  if (primerPalabra.length == 0 || segundaPalabra.length == 0) {
+  if (primerPalabra.length == 0 && segundaPalabra.length == 0) {
+    retoContenedor[1].innerHTML = "Ingresa las palabras";
+  } else if(primerPalabra.length == 0 || segundaPalabra.length == 0) {
     retoContenedor[1].innerHTML = "Ingresa otra palabra";
   } else if (primerPalabra.length != segundaPalabra.length) {
     retoContenedor[1].innerHTML = "No es un anagrama";

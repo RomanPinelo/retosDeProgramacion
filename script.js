@@ -92,3 +92,29 @@ borrarButton[2].addEventListener("click", () => {
   document.getElementById("numeroTerminos").value = "";
   borrarResultado(2);
 });
+
+// Reto #3
+function isPrimo(numero) {
+  let divisores = [];
+  for (let i = 1; i <= numero; i++) {
+    if (numero % i == 0) {
+      divisores.push(i);
+    }
+  }
+
+  if (divisores.length == 2) {
+    if (divisores.includes(1) && divisores.includes(numero)) {
+      retoContenedor[3].innerHTML += `${numero}, `;
+    }
+  }
+}
+
+mostrarButton[3].addEventListener("click", () => {
+  for (let i = 1; i <= 100; i++) {
+    isPrimo(i);
+  }
+});
+
+borrarButton[3].addEventListener("click", () => {
+  borrarResultado(3);
+});

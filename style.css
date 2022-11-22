@@ -93,6 +93,16 @@ button:hover {
   color: var(--boton);
 }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] { 
+  -moz-appearance:textfield; 
+}
+
 /* Reto #1 */
 .retocontenedor .palabras {
   margin: 1rem 0;

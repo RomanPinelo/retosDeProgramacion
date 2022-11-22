@@ -58,3 +58,37 @@ borrarButton[1].addEventListener("click", () => {
   document.getElementById("palabra2").value = "";
   borrarResultado(1);
 });
+
+
+// Reto #2
+function fibonacci(numTerminos, inicioSerie) {
+  let suma = 0;
+
+  retoContenedor[2].innerHTML = `${inicioSerie[0]}, ${inicioSerie[1]}`;
+
+  for (let i = 0; i < numTerminos - 2; i++) {
+    suma = inicioSerie[i] + inicioSerie[i + 1];
+    inicioSerie.push(suma);
+    retoContenedor[2].innerHTML += `, ${inicioSerie[i + 2]}`;
+  }
+}
+
+mostrarButton[2].addEventListener("click", () => {
+  let numTerminos = document.getElementById("numeroTerminos").value;
+  let inicioSerie = [0, 1];
+
+  if (numTerminos < 1) {
+    retoContenedor[2].innerHTML = "Ingrese un número mayor a 0";
+  } else if (numTerminos == 1) {
+    retoContenedor[2].innerHTML = inicioSerie[0];
+  } else if (numTerminos == 2) {
+    retoContenedor[2].innerHTML = `${inicioSerie[0]}, ${inicioSerie[1]}`;
+  } else {
+    fibonacci(numTerminos, inicioSerie);
+  }
+});
+
+borrarButton[2].addEventListener("click", () => {
+  document.getElementById("numeroTerminos").value = "";
+  borrarResultado(2);
+});
